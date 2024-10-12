@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="allowDividerAbove" format="boolean" />
+    <attr name="allowDividerBelow" format="boolean" />
+    <attr name="iconSpaceReserved" format="boolean" />
+    <attr name="singleLineTitle" format="boolean" />
+    <attr name="adjustable" format="boolean" />
+    <attr name="showSeekBarValue" format="boolean" />
+    <attr name="pref_categoryColor" format="reference|color" />
+    <attr name="pref_summaryHasText" format="reference|string" />
+    <attr name="pref_summaryPasswordSubstitute" format="reference|string" />
+    <attr name="pref_summaryPasswordSubstituteLength" format="reference|integer" />
+    <attr name="preferenceActivityStyle" format="reference" />
+    <attr name="preferenceCategoryStyle" format="reference" />
+    <attr name="preferenceCategory_marginBottom" format="dimension" />
+    <attr name="preferenceDialog_messageAppearance" format="reference" />
+    <attr name="preferenceFragmentCompatStyle" format="reference" />
+    <attr name="preferenceFragmentListStyle" format="reference" />
+    <attr name="preferenceFragmentPaddingSide" format="dimension" />
+    <attr name="preferenceFragmentStyle" format="reference" />
+    <attr name="preferenceHeaderPanelStyle" format="reference" />
+    <attr name="preferenceInformationStyle" format="reference" />
+    <attr name="preferenceLayoutChild" format="reference" />
+    <attr name="preferenceListStyle" format="reference" />
+    <attr name="preferencePanelStyle" format="reference" />
+    <attr name="preferenceScreenStyle" format="reference" />
+    <attr name="preferenceStyle" format="reference" />
+    <attr name="preferenceTheme" format="reference" />
+    <attr name="allowDividerAfterLastItem" format="boolean" />
+    <attr name="checkBoxPreferenceStyle" format="reference" />
+    <attr name="dialogPreferenceStyle" format="reference" />
+    <attr name="dropdownPreferenceStyle" format="reference" />
+    <attr name="editTextPreferenceStyle" format="reference" />
+    <attr name="seekBarPreferenceStyle" format="reference" />
+    <attr name="switchPreferenceCompatStyle" format="reference" />
+    <attr name="switchPreferenceStyle" format="reference" />
+    <attr name="maxHeight" format="dimension" />
+    <attr name="maxWidth" format="dimension" />
+
+
+
+</resources>

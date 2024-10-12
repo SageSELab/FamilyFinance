@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="item_row_icon" type="id"/>
+    <item type="id" name="icon_frame" />
+    <item type="id" name="spinner" />
+    <item type="id" name="seekbar" />
+    <item type="id" name="seekbar_value" />
+    <item type="id" name="switchWidget" />
 </resources>

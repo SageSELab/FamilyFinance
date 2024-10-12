@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Entity Item -->
+    <dimen name="preference_seekbar_value_width">36.0dip</dimen>
+    <dimen name="pref_seekbar_fix_negative">-12.0dip</dimen>
+    <dimen name="pref_seekbar_fix_positive">12.0dip</dimen>
+    <dimen name="preference_category_padding_start">0.0dip</dimen>
+    <dimen name="preference_icon_minWidth">0.0dip</dimen>
+    <dimen name="preference_seekbar_padding_end">22.0dip</dimen>
+    <dimen name="preference_seekbar_padding_start">0.0dip</dimen>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="divider_margin_top">6dp</dimen>
 

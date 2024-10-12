@@ -42,6 +42,8 @@ import static io.github.zwieback.familyfinance.business.operation.filter.Transfe
 import static io.github.zwieback.familyfinance.core.activity.EntityActivity.INPUT_READ_ONLY;
 import static io.github.zwieback.familyfinance.core.activity.EntityActivity.INPUT_REGULAR_SELECTABLE;
 
+import com.getkeepsafe.relinker.ReLinker;
+
 @RuntimePermissions
 public class DashboardActivity extends DataActivityWrapper {
 
