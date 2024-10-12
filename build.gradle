@@ -34,9 +34,14 @@ buildscript {
         ]
     }
     repositories {
-        jcenter()
+        //jcenter()
         mavenCentral()
         google()
+        //maven { url 'https://jitpack.io' }
+        maven { url = uri('https://repo.mocha.global/repository/maven-releases/') }
+        maven { url = uri('https://repository.mulesoft.org/nexus/content/repositories/public/')}
+        maven { url = uri('https://maven.scijava.org/content/repositories/public/')}
+        //maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
@@ -48,10 +53,14 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        //jcenter()
         mavenCentral()
         google()
-        maven { url "https://jitpack.io" }
+        //maven { url 'https://jitpack.io' }
+        maven { url = uri('https://repo.mocha.global/repository/maven-releases/') }
+        maven { url = uri('https://repository.mulesoft.org/nexus/content/repositories/public/')}
+        maven { url = uri('https://maven.scijava.org/content/repositories/public/')}
+        //maven { url 'https://jitpack.io' }
     }
 }
 
