@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.sms.model.dto;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class SmsDto {
 

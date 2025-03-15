@@ -1,6 +1,7 @@
 package io.github.zwieback.familyfinance.business.account.activity.helper;
 
-import android.support.v7.widget.AppCompatSpinner;
+
+import androidx.appcompat.widget.AppCompatSpinner;
 
 import io.github.zwieback.familyfinance.core.model.Account;
 import io.github.zwieback.familyfinance.core.model.type.AccountType;

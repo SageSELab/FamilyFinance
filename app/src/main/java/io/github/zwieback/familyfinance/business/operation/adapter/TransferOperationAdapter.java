@@ -21,6 +21,11 @@ public class TransferOperationAdapter extends OperationAdapter<TransferOperation
         super(context, clickListener, data, filter);
     }
 
+//    @Override
+//    public void queryAsync() {
+//        super.queryAsync();
+//    }
+
     @Override
     protected EntityProvider<OperationView> createProvider(Context context) {
         return new TransferOperationViewProvider(context);

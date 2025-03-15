@@ -4,9 +4,6 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
 
 import io.github.zwieback.familyfinance.R;
@@ -42,7 +39,11 @@ import static io.github.zwieback.familyfinance.business.operation.filter.Transfe
 import static io.github.zwieback.familyfinance.core.activity.EntityActivity.INPUT_READ_ONLY;
 import static io.github.zwieback.familyfinance.core.activity.EntityActivity.INPUT_REGULAR_SELECTABLE;
 
-@RuntimePermissions
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+
+//@RuntimePermissions
 public class DashboardActivity extends DataActivityWrapper {
 
     public static final String RESULT_CURRENCY_ID = "resultCurrencyId";
@@ -103,7 +104,7 @@ public class DashboardActivity extends DataActivityWrapper {
         new DrawerCreator(this).createDrawer(findToolbar());
         init(savedInstanceState);
         bindOnClickListeners();
-        DashboardActivityPermissionsDispatcher.registerSmsReceiverWithPermissionCheck(this);
+//        DashboardActivityPermissionsDispatcher.registerSmsReceiverWithPermissionCheck(this);
     }
 
     @Override
@@ -216,7 +217,7 @@ public class DashboardActivity extends DataActivityWrapper {
                                            @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        DashboardActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
+//        DashboardActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
     }
 
     @NeedsPermission(Manifest.permission.RECEIVE_SMS)

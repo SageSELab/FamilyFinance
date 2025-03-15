@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.sms_pattern.query;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import io.github.zwieback.familyfinance.core.model.SmsPattern;
 import io.github.zwieback.familyfinance.core.model.SmsPatternView;

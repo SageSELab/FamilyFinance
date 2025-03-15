@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Telephony;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import io.github.zwieback.familyfinance.app.FamilyFinanceApplication;
 import io.github.zwieback.familyfinance.business.sms.handler.SmsHandler;

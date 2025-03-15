@@ -2,12 +2,13 @@ package io.github.zwieback.familyfinance.business.chart.fragment;
 
 import android.graphics.RectF;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.DialogFragment;
+
 import android.view.View;
 
 import com.annimon.stream.Stream;
@@ -78,8 +79,8 @@ public class BarChartFragment extends ChartFragment<BarChart, BarEntry, FlowOfFu
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        maxBarCountOnScreen = getResources().getInteger(R.integer.max_bar_count_on_screen);
-        barValueTextSize = getResources().getDimension(R.dimen.bar_value_text_size);
+        maxBarCountOnScreen = extractContext().getResources().getInteger(R.integer.max_bar_count_on_screen);
+        barValueTextSize = extractContext().getResources().getDimension(R.dimen.bar_value_text_size);
         onValueSelectedRectF = new RectF();
         operationSieve = new OperationSieve();
     }
@@ -128,9 +129,9 @@ public class BarChartFragment extends ChartFragment<BarChart, BarEntry, FlowOfFu
 
         IAxisValueFormatter xAxisFormatter = determineXAxisFormatter();
         IAxisValueFormatter yAxisFormatter = new LargeValueFormatter();
-        float xAxisYOffset = getResources().getDimension(R.dimen.x_axis_y_offset);
-        int yAxisMinimum = getResources().getInteger(R.integer.y_axis_minimum);
-        int xAxisRotationAngle = getResources().getInteger(R.integer.x_axis_label_rotation_angle);
+        float xAxisYOffset = extractContext().getResources().getDimension(R.dimen.x_axis_y_offset);
+        int yAxisMinimum = extractContext().getResources().getInteger(R.integer.y_axis_minimum);
+        int xAxisRotationAngle = extractContext().getResources().getInteger(R.integer.x_axis_label_rotation_angle);
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
@@ -226,7 +227,7 @@ public class BarChartFragment extends ChartFragment<BarChart, BarEntry, FlowOfFu
                                        boolean visible) {
         Map<Float, List<OperationView>> operations = filterOperations(groupedOperations, types);
         List<BarEntry> barEntries = convertOperations(operations);
-        BarDataSet dataSet = new BarDataSet(barEntries, getString(dataSetLabel));
+        BarDataSet dataSet = new BarDataSet(barEntries, extractContext().getString(dataSetLabel));
         dataSet.setDrawIcons(false);
         dataSet.setColors(ContextCompat.getColor(extractContext(), dataSetColor));
         dataSet.setDrawValues(drawValuesEnabled);

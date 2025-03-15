@@ -1,0 +1,24 @@
+import org.gradle.internal.jvm.Jvm
+
+apply plugin: 'kotlin'
+
+// Connect sources & tests to library project
+sourceSets.main.java.srcDir project(":library").file("src/main/java")
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION"
+    implementation "com.squareup:javapoet:$JAVAPOET_VERSION"
+    implementation "com.squareup:kotlinpoet:$KOTLINPOET_VERSION"
+
+    testImplementation "junit:junit:$JUNIT_VERSION"
+    testImplementation "com.google.testing.compile:compile-testing:$COMPILE_TESTING_VERSION"
+    testImplementation "commons-io:commons-io:$COMMONS_IO_VERSION"
+//    testImplementation androidJar()
+//    testImplementation files(Jvm.current().getToolsJar())
+//    testImplementationAar "com.android.support:support-v4:$SUPPORT_LIBRARY_VERSION"
+//    testImplementationAar "com.android.support:support-v13:$SUPPORT_LIBRARY_VERSION"
+//    testImplementationAar project(path: ":library", configuration: "default")
+}
+

@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.article.query;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import io.github.zwieback.familyfinance.core.model.ArticleView;
 import io.github.zwieback.familyfinance.core.model.type.ArticleType;

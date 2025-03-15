@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.business.sms_pattern.lifecycle.creator;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.TreeSet;
 

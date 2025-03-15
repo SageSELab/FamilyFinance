@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="io.github.zwieback.familyfinance">
+          xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
@@ -18,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".business.dashboard.activity.DashboardActivity">
+        <activity android:name=".business.dashboard.activity.DashboardActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -53,6 +53,7 @@
             android:theme="@style/AppTheme.Preference"/>
         <activity
             android:name="com.nononsenseapps.filepicker.FilePickerActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.FilePicker">
             <intent-filter>
@@ -65,7 +66,7 @@
         <activity android:name=".business.chart.activity.ChartActivity"/>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -76,6 +77,7 @@
 
         <receiver
             android:name=".business.sms.receiver.SmsReceiver"
+            android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">
             <intent-filter android:priority="1000">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>

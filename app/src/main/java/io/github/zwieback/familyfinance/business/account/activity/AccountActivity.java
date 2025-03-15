@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.business.account.activity;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.account.filter.AccountFilter;

@@ -2,8 +2,8 @@ package io.github.zwieback.familyfinance.business.operation.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import android.view.MenuItem;
 
 import java.util.Collections;
@@ -41,19 +41,18 @@ public class FlowOfFundsOperationActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_add_expense:
-                addExpenseOperation();
-                return true;
-            case R.id.action_add_income:
-                addIncomeOperation();
-                return true;
-            case R.id.action_add_transfer:
-                addTransferOperation();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_add_expense) {
+            addExpenseOperation();
+            return true;
+        } else if (itemId == R.id.action_add_income) {
+            addIncomeOperation();
+            return true;
+        } else if (itemId == R.id.action_add_transfer) {
+            addTransferOperation();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

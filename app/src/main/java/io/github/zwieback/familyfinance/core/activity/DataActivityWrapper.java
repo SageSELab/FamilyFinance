@@ -11,6 +11,7 @@ import io.reactivex.schedulers.Schedulers;
 import io.requery.Persistable;
 import io.requery.reactivex.ReactiveEntityStore;
 
+
 public abstract class DataActivityWrapper extends ActivityWrapper {
 
     protected ReactiveEntityStore<Persistable> data;

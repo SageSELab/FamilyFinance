@@ -1,15 +1,15 @@
 package io.github.zwieback.familyfinance.business.backup.helper;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.io.File;
 import java.io.IOException;
 
-import io.github.zwieback.familyfinance.core.model.Models;
 import io.github.zwieback.familyfinance.util.FileUtils;
 
+import static io.github.zwieback.familyfinance.core.Models.DEFAULT;
 import static io.github.zwieback.familyfinance.core.storage.helper.ExternalStorageHelper.getExternalDbFile;
 import static io.github.zwieback.familyfinance.core.storage.helper.ExternalStorageHelper.getExternalSharedPrefsFile;
 import static io.github.zwieback.familyfinance.core.storage.helper.InternalStorageHelper.getInternalDbFile;
@@ -67,6 +67,6 @@ public final class BackupHelper {
     }
 
     private static String getDatabaseName() {
-        return Models.DEFAULT.getName();
+        return DEFAULT.getName();
     }
 }

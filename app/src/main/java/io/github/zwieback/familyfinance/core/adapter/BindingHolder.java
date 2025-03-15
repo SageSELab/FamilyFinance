@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.core.adapter;
 
-import android.databinding.ViewDataBinding;
-import android.support.v7.widget.RecyclerView;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class BindingHolder<B extends ViewDataBinding> extends RecyclerView.ViewHolder {
 

@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.core.activity;
 
-import android.databinding.ViewDataBinding;
+import androidx.databinding.ViewDataBinding;
 
 import com.annimon.stream.Collectors;
 import com.annimon.stream.Stream;

@@ -2,7 +2,7 @@ package io.github.zwieback.familyfinance.business.template.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -40,19 +40,18 @@ public class TemplateActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_add_expense_template:
-                addExpenseTemplate();
-                return true;
-            case R.id.action_add_income_template:
-                addIncomeTemplate();
-                return true;
-            case R.id.action_add_transfer_template:
-                addTransferTemplate();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_add_expense_template) {
+            addExpenseTemplate();
+            return true;
+        } else if (itemId == R.id.action_add_income_template) {
+            addIncomeTemplate();
+            return true;
+        } else if (itemId == R.id.action_add_transfer_template) {
+            addTransferTemplate();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

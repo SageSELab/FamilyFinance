@@ -1,6 +1,7 @@
 package io.github.zwieback.familyfinance.core.model;
 
-import android.databinding.Bindable;
+
+import androidx.databinding.Bindable;
 
 import io.github.zwieback.familyfinance.core.model.restriction.SmsPatternRestriction;
 import io.requery.CascadeAction;

@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.calculator.dialog;
-
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.math.BigDecimal;
 

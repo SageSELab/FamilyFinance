@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.core.filter;
 
 import android.os.Parcel;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.annimon.stream.Objects;
 

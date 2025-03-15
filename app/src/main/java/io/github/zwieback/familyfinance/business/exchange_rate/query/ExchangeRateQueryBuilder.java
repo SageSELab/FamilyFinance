@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.exchange_rate.query;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import org.threeten.bp.LocalDate;
 

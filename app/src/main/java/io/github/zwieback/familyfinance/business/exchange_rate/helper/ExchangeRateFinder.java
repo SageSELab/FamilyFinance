@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.exchange_rate.helper;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import io.github.zwieback.familyfinance.core.model.ExchangeRate;
 import io.requery.Persistable;

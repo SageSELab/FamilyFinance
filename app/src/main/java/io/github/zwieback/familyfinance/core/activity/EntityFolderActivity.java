@@ -1,11 +1,12 @@
 package io.github.zwieback.familyfinance.core.activity;
 
 import android.os.Bundle;
-import android.support.annotation.CallSuper;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.PopupMenu;
+import androidx.annotation.CallSuper;
+import androidx.annotation.Nullable;
+
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.annimon.stream.Objects;
@@ -53,13 +54,11 @@ public abstract class EntityFolderActivity<
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_add_folder:
-                addFolder();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.action_add_folder) {
+            addFolder();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     // -----------------------------------------------------------------------------------------
@@ -126,25 +125,24 @@ public abstract class EntityFolderActivity<
     @Override
     protected PopupMenu.OnMenuItemClickListener getPopupItemClickListener(ENTITY entity) {
         return item -> {
-            switch (item.getItemId()) {
-                case R.id.action_select:
-                    closeActivity(entity);
-                    return true;
-                case R.id.action_add_nested_entry:
-                    addNestedEntity(entity);
-                    return true;
-                case R.id.action_add_nested_folder:
-                    addNestedFolder(entity);
-                    return true;
-                case R.id.action_edit:
-                    editEntity(entity);
-                    return true;
-                case R.id.action_delete:
-                    deleteEntity(entity);
-                    return true;
-                default:
-                    return false;
+            int itemId = item.getItemId();
+            if (itemId == R.id.action_select) {
+                closeActivity(entity);
+                return true;
+            } else if (itemId == R.id.action_add_nested_entry) {
+                addNestedEntity(entity);
+                return true;
+            } else if (itemId == R.id.action_add_nested_folder) {
+                addNestedFolder(entity);
+                return true;
+            } else if (itemId == R.id.action_edit) {
+                editEntity(entity);
+                return true;
+            } else if (itemId == R.id.action_delete) {
+                deleteEntity(entity);
+                return true;
             }
+            return false;
         };
     }
 

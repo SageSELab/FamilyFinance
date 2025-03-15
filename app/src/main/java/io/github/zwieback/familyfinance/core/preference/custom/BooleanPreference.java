@@ -1,9 +1,10 @@
 package io.github.zwieback.familyfinance.core.preference.custom;
 
 import android.content.Context;
-import android.support.annotation.CallSuper;
-import android.support.v7.preference.CheckBoxPreference;
-import android.support.v7.preference.Preference;
+import androidx.annotation.CallSuper;
+import androidx.preference.CheckBoxPreference;
+import androidx.preference.Preference;
+
 import android.util.AttributeSet;
 
 public abstract class BooleanPreference

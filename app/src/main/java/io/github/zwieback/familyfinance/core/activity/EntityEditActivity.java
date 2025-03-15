@@ -2,15 +2,15 @@ package io.github.zwieback.familyfinance.core.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
+
+import androidx.annotation.CallSuper;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 import android.os.Bundle;
-import android.support.annotation.CallSuper;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.design.widget.TextInputLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.johnpetitto.validator.ValidatingTextInputLayout;
 import com.johnpetitto.validator.Validators;
 import com.mikepenz.iconics.view.IconicsImageView;
@@ -78,13 +79,11 @@ public abstract class EntityEditActivity<E extends IBaseEntity, B extends ViewDa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_save:
-                saveEntity();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.action_save) {
+            saveEntity();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.preference.Preference;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.preference.Preference;
+
 import android.util.AttributeSet;
 
-import com.takisoft.fix.support.v7.preference.PreferenceActivityResultListener;
-import com.takisoft.fix.support.v7.preference.PreferenceFragmentCompat;
+
+import com.takisoft.preferencex.PreferenceActivityResultListener;
+import com.takisoft.preferencex.PreferenceFragmentCompat;
 
 import io.github.zwieback.familyfinance.business.preference.activity.SettingsActivity;
 import io.github.zwieback.familyfinance.core.preference.config.BackupPrefs;

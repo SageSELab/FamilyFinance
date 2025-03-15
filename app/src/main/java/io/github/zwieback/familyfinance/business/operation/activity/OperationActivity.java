@@ -1,8 +1,9 @@
 package io.github.zwieback.familyfinance.business.operation.activity;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.PopupMenu;
+import androidx.annotation.NonNull;
+
 import android.view.View;
+import android.widget.PopupMenu;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.operation.filter.OperationFilter;
@@ -53,19 +54,18 @@ abstract class OperationActivity<
     @Override
     protected PopupMenu.OnMenuItemClickListener getPopupItemClickListener(OperationView operation) {
         return item -> {
-            switch (item.getItemId()) {
-                case R.id.action_duplicate:
-                    duplicateEntity(operation);
-                    return true;
-                case R.id.action_edit:
-                    editEntity(operation);
-                    return true;
-                case R.id.action_delete:
-                    deleteEntity(operation);
-                    return true;
-                default:
-                    return false;
+            int itemId = item.getItemId();
+            if (itemId == R.id.action_duplicate) {
+                duplicateEntity(operation);
+                return true;
+            } else if (itemId == R.id.action_edit) {
+                editEntity(operation);
+                return true;
+            } else if (itemId == R.id.action_delete) {
+                deleteEntity(operation);
+                return true;
             }
+            return false;
         };
     }
 

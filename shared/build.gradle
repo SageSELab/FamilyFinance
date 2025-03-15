@@ -2,16 +2,12 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion setup.compileSdk
-    buildToolsVersion setup.buildTools
 
     defaultConfig {
         minSdkVersion setup.minSdk
         targetSdkVersion setup.targetSdk
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -29,21 +25,20 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     lintOptions {
-        abortOnError false
         disable 'InvalidPackage'
     }
+    namespace 'io.github.zwieback.familyfinance.core'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'androidx.annotation', module: 'annotation'
     })
-    // support libraries
-    implementation "com.android.support:support-v4:${versions.supportLib}"
-    implementation "com.android.support:appcompat-v7:${versions.supportLib}"
-    implementation "com.android.support:gridlayout-v7:${versions.supportLib}"
-    implementation "com.android.support:design:${versions.supportLib}"
+    // AndroidX libraries
+    implementation "androidx.core:core:1.9.0"
+    implementation "androidx.appcompat:appcompat:1.4.0"
+    implementation "com.google.android.material:material:1.4.0"
     // java.time
     implementation "com.jakewharton.threetenabp:threetenabp:${versions.timeLib}"
     // java 8 streams

@@ -1,8 +1,8 @@
 package io.github.zwieback.familyfinance.business.operation.adapter;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
@@ -66,11 +66,11 @@ public abstract class OperationAdapter<FILTER extends OperationFilter>
         cancelBalanceCalculation();
     }
 
-    @Override
-    public void queryAsync() {
-        super.queryAsync();
-        calculateBalanceInBackground();
-    }
+//    @Override
+//    public void queryAsync() {
+//        super.queryAsync();
+//        calculateBalanceInBackground();
+//    }
 
     private void calculateBalanceInBackground() {
         if (balanceView == null) {

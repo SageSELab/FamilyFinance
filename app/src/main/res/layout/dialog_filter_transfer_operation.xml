@@ -33,7 +33,7 @@
                 android:orientation="horizontal"
                 android:weightSum="@integer/full_weight">
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/article_layout"
                     android:layout_width="@dimen/zero_weight"
                     android:layout_height="wrap_content"
@@ -49,9 +49,9 @@
                         app:readOnly="@{true}"
                         style="@style/AppTheme.EditText.Clearable"/>
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/currency_layout"
                     android:layout_width="@dimen/zero_weight"
                     android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
                         app:readOnly="@{true}"
                         style="@style/AppTheme.EditText.Clearable"/>
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -95,7 +95,7 @@
 
                 </com.johnpetitto.validator.ValidatingTextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/owner_layout"
                     android:layout_width="@dimen/zero_weight"
                     android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                         app:readOnly="@{true}"
                         style="@style/AppTheme.EditText.Clearable"/>
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -133,7 +133,7 @@
                     app:validateAfterTextChanged="true"
                     app:validator="date">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/start_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                     app:validateAfterTextChanged="true"
                     app:validator="date">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/end_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

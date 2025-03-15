@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.template.lifecycle.destroyer;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.sql.Connection;
 

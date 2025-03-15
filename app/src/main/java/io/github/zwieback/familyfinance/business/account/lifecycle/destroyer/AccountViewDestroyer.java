@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.account.lifecycle.destroyer;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import io.github.zwieback.familyfinance.core.lifecycle.destroyer.EntityViewDestroyer;
 
 import java.sql.Connection;

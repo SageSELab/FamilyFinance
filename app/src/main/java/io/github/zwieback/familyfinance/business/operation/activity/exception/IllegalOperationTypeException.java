@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.operation.activity.exception;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import io.github.zwieback.familyfinance.core.model.OperationView;
 import io.github.zwieback.familyfinance.core.model.type.OperationType;

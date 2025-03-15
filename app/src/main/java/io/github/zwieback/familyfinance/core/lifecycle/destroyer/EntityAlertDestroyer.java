@@ -1,8 +1,8 @@
 package io.github.zwieback.familyfinance.core.lifecycle.destroyer;
 
 import android.content.Context;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.core.model.IBaseEntity;

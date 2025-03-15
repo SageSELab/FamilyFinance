@@ -2,9 +2,9 @@ package io.github.zwieback.familyfinance.business.iconics.fragment.item;
 
 import android.content.res.Resources;
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.State;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * @author pa.gulko zTrap (28.10.2017)
@@ -12,7 +12,7 @@ import android.view.View;
 public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
-    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, State state) {
+    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         int space = (int) Math.ceil(8 * Resources.getSystem().getDisplayMetrics().density); // 8 dp
         int position = parent.getChildAdapterPosition(view);
         if (position < 2) {

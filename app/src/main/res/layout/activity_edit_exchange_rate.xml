@@ -107,7 +107,7 @@
                     app:validateAfterTextChanged="true"
                     app:validator="date">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

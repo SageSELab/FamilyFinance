@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.business.chart.service.converter.bar;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Pair;
 
 import com.annimon.stream.Collectors;

@@ -1,8 +1,8 @@
 package io.github.zwieback.familyfinance.core.lifecycle.creator;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 
 import java.util.Comparator;
 import java.util.concurrent.Callable;

@@ -2,8 +2,10 @@ package io.github.zwieback.familyfinance.util;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.support.v4.os.ConfigurationCompat;
-import android.support.v4.os.LocaleListCompat;
+
+
+import androidx.core.os.ConfigurationCompat;
+import androidx.core.os.LocaleListCompat;
 
 import java.util.Locale;
 

@@ -14,7 +14,7 @@
     <!-- https://github.com/ACRA/acra/wiki/AdvancedUsage#dialog -->
     <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog"/>
 
-    <style name="AppTheme.Preference" parent="@style/PreferenceFixTheme.Light.NoActionBar">
+    <style name="AppTheme.Preference" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>

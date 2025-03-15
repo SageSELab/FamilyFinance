@@ -2,7 +2,7 @@ package io.github.zwieback.familyfinance.business.operation.dialog;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.databinding.ViewDataBinding;
+import androidx.databinding.ViewDataBinding;
 import android.view.View;
 
 import io.github.zwieback.familyfinance.business.article.activity.ArticleActivity;

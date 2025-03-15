@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.account.query;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import io.github.zwieback.familyfinance.core.model.Account;
 import io.github.zwieback.familyfinance.core.model.AccountView;

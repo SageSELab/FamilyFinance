@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion setup.compileSdk
+    namespace 'permissions.dispatcher'
+    defaultConfig {
+        minSdkVersion setup.minSdk
+        targetSdkVersion setup.targetSdk
+    }
+    buildTypes {
+        debug {
+            versionNameSuffix "-DEBUG"
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = [
+                        'src/main/java',
+                        'src/main/android'
+                ]
+            }
+        }
+    }
+}
+
+configurations {
+    lintChecks
+}
+
+dependencies {
+    implementation "com.android.support:support-compat:$SUPPORT_LIBRARY_VERSION"
+    implementation "com.android.support:support-v13:$SUPPORT_LIBRARY_VERSION"
+
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc5'
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc5'
+    testImplementation "junit:junit:$JUNIT_VERSION"
+    testImplementation "org.mockito:mockito-core:$MOCKITO_VERSION"
+    testImplementation "org.powermock:powermock-api-mockito:$POWERMOCK_VERSION"
+    testImplementation "org.powermock:powermock-module-junit4:$POWERMOCK_VERSION"
+
+    lintChecks project(path: ':lint', configuration: 'lintChecks')
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}

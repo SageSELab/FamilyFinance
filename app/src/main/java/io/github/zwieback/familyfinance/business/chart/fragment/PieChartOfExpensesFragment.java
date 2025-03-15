@@ -1,6 +1,7 @@
 package io.github.zwieback.familyfinance.business.chart.fragment;
 
-import android.support.v4.app.DialogFragment;
+
+import androidx.fragment.app.DialogFragment;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.chart.dialog.PieChartDisplayDialog;

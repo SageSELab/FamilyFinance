@@ -2,9 +2,10 @@ package io.github.zwieback.familyfinance.core.preference.custom;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v7.preference.Preference;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.preference.Preference;
+
 import android.util.AttributeSet;
 
 import io.github.zwieback.familyfinance.core.model.IBaseEntity;

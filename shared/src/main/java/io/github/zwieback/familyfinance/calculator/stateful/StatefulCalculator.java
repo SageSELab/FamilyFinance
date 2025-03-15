@@ -1,6 +1,5 @@
 package io.github.zwieback.familyfinance.calculator.stateful;
 
-import android.support.annotation.Nullable;
 
 import java.math.BigDecimal;
 
@@ -10,6 +9,8 @@ import io.github.zwieback.familyfinance.util.NumberUtils;
 import io.github.zwieback.familyfinance.util.StringUtils;
 
 import static io.github.zwieback.familyfinance.util.StringUtils.EMPTY;
+
+import androidx.annotation.Nullable;
 
 public class StatefulCalculator {
 

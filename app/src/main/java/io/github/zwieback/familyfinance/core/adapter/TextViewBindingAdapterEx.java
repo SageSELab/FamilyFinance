@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.core.adapter;
 
-import android.databinding.BindingAdapter;
-import android.databinding.adapters.TextViewBindingAdapter;
+import androidx.databinding.BindingAdapter;
+import androidx.databinding.adapters.TextViewBindingAdapter;
 import android.widget.TextView;
 
 import io.github.zwieback.familyfinance.R;

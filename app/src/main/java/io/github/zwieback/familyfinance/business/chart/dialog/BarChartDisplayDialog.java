@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.business.chart.dialog;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.chart.display.BarChartDisplay;

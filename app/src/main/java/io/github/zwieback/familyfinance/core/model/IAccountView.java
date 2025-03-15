@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.core.model;
 
-import android.databinding.Bindable;
+import androidx.databinding.Bindable;
 
 import java.math.BigDecimal;
 

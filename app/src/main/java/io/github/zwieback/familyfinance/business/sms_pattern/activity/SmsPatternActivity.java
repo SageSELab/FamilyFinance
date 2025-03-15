@@ -2,7 +2,7 @@ package io.github.zwieback.familyfinance.business.sms_pattern.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.sms_pattern.filter.SmsPatternFilter;

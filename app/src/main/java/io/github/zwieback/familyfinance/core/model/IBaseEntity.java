@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.core.model;
 
-import android.databinding.Observable;
+import androidx.databinding.Observable;
 import android.os.Parcelable;
 
 import java.io.Serializable;

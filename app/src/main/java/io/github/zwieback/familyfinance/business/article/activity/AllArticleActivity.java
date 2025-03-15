@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.business.article.activity;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.article.filter.AllArticleFilter;

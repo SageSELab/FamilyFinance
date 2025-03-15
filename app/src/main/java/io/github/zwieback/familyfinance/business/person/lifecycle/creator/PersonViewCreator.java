@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.business.person.lifecycle.creator;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.sql.Connection;
 

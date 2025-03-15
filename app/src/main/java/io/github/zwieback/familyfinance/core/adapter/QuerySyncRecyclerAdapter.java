@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.core.adapter;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import io.github.zwieback.familyfinance.core.model.IBaseEntity;
 import io.requery.android.QueryRecyclerAdapter;

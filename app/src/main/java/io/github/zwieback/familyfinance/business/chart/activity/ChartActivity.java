@@ -1,14 +1,15 @@
 package io.github.zwieback.familyfinance.business.chart.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.annimon.stream.Stream;
+import com.google.android.material.tabs.TabLayout;
 import com.mikepenz.iconics.utils.IconicsMenuInflaterUtil;
 
 import java.util.ArrayList;
@@ -81,22 +82,21 @@ public class ChartActivity extends DataActivityWrapper
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         ChartFragment chartFragment;
-        switch (item.getItemId()) {
-            case R.id.action_filter:
-                chartFragment = findFragment();
-                if (chartFragment != null) {
-                    chartFragment.showFilterDialog();
-                }
-                return true;
-            case R.id.action_display:
-                chartFragment = findFragment();
-                if (chartFragment != null) {
-                    chartFragment.showDisplayDialog();
-                }
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_filter) {
+            chartFragment = findFragment();
+            if (chartFragment != null) {
+                chartFragment.showFilterDialog();
+            }
+            return true;
+        } else if (itemId == R.id.action_display) {
+            chartFragment = findFragment();
+            if (chartFragment != null) {
+                chartFragment.showDisplayDialog();
+            }
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package io.github.zwieback.familyfinance.business.operation.dialog;
 
 import android.os.Bundle;
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 import android.widget.EditText;
 
 import com.johnpetitto.validator.ValidatingTextInputLayout;

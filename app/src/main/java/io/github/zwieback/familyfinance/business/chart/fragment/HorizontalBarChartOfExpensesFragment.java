@@ -1,8 +1,8 @@
 package io.github.zwieback.familyfinance.business.chart.fragment;
 
-import android.support.annotation.ColorRes;
-import android.support.annotation.StringRes;
-import android.support.v4.app.DialogFragment;
+import androidx.annotation.ColorRes;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.DialogFragment;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.chart.dialog.HorizontalBarChartDisplayDialog;

@@ -7,7 +7,6 @@ try {
 
 android {
     compileSdkVersion setup.compileSdk
-    buildToolsVersion setup.buildTools
 
     defaultConfig {
         applicationId "io.github.zwieback.familyfinance"
@@ -42,9 +41,15 @@ android {
         abortOnError false
         disable 'InvalidPackage'
     }
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding true
+        viewBinding true
     }
+//    dataBinding {
+//        enabled = true
+//    }
+
+    namespace 'io.github.zwieback.familyfinance'
 }
 
 dependencies {
@@ -53,7 +58,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     // support libs
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
@@ -63,7 +68,7 @@ dependencies {
     // JPA
     implementation "io.requery:requery:${versions.requeryLib}"
     implementation "io.requery:requery-android:${versions.requeryLib}"
-    implementation "io.requery:sqlite-android:${versions.sqliteAndroidLib}"
+    implementation 'com.github.requery:sqlite-android:3.45.0'
     // RxJava
     implementation "io.reactivex.rxjava2:rxjava:${versions.rxJavaLib}"
     implementation "io.reactivex.rxjava2:rxandroid:${versions.rxAndroidLib}"
@@ -93,15 +98,17 @@ dependencies {
     releaseImplementation "ch.acra:acra-mail:${versions.acraLib}"
     releaseImplementation "ch.acra:acra-dialog:${versions.acraLib}"
     // preferences
-    implementation "com.takisoft.fix:preference-v7:${versions.preferenceCompatLib}"
+    implementation "androidx.preference:preference:1.2.1"
+    implementation 'com.takisoft.preferencex:preferencex:1.1.0'
+//    implementation "com.takisoft.fix:preference-v7:${versions.preferenceCompatLib}"
     // shared preferences
-    implementation "ds.gendalf:gendalf:${versions.gendalfLib}"
+//    implementation "ds.gendalf:gendalf:${versions.gendalfLib}"
     // file/directory picker
     implementation "com.nononsenseapps:filepicker:${versions.filepickerLib}"
     // permissions dispatcher
-    implementation("com.github.hotchemi:permissionsdispatcher:${versions.permissionsDispatcherLib}") {
-        exclude module: "support-v13"
-    }
+//    implementation("com.github.hotchemi:permissionsdispatcher:${versions.permissionsDispatcherLib}") {
+//        exclude module: "support-v13"
+//    }
     // RxBinding
     implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${versions.rxBinding2Lib}"
     // chart
@@ -109,14 +116,23 @@ dependencies {
     // project libs
     implementation project(':shared')
     implementation project(':validator')
+    implementation project(':library')
+    implementation project(':api')
+    annotationProcessor project(':compiler')
+    annotationProcessor project(':processor')
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc5'
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc5'
     testImplementation 'junit:junit:4.12'
     annotationProcessor "io.requery:requery-processor:${versions.requeryLib}"
-    annotationProcessor "ds.gendalf:compiler:${versions.gendalfLib}"
-    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:${versions.permissionsDispatcherLib}"
+//    annotationProcessor "ds.gendalf:compiler:${versions.gendalfLib}"
+//    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:${versions.permissionsDispatcherLib}"
+    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.2"
+    annotationProcessor "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.2"
 
     // UiAutomator Testing
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
     androidTestImplementation 'androidx.test:core:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'androidx.annotation:annotation:1.9.1'
+//    implementation 'javax.annotation:javax.annotation-api:1.3.2'
 }

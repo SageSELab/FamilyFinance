@@ -1,17 +1,26 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+project.ext.buildToolsVersion = '28.0.2'
+project.ext.minSdkVersion = 14
+project.ext.sdkVersion = 28
+project.ext.supportLibraryVersion = '28.0.0'
+project.ext.supportLibraryVersionPrefix = '28.0.0'
+project.ext.supportLibraryVersionSuffix = ''
+project.ext.fixLibraryVersion = '0'
 
+project.ext.extrasLibraryVersionSuffix = ''
 buildscript {
     ext {
         setup = [
-                compileSdk: 28,
+                compileSdk: 34,
                 buildTools: '28.0.3',
-                minSdk    : 15,
-                targetSdk : 28
+                minSdk    : 19,
+                targetSdk : 34
         ]
         versions = [
                 supportLib: '28.0.0',
                 multidexLib: '1.0.3',
-                requeryLib: '1.5.1',
+                requeryLib: '1.6.0',
                 sqliteAndroidLib: '3.23.1',
                 rxJavaLib: '2.2.2',
                 rxAndroidLib: '2.1.0',
@@ -34,23 +43,21 @@ buildscript {
         ]
     }
     repositories {
-        jcenter()
+        google()  // Move google() to the top
         mavenCentral()
-        google()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:8.8.1'  // Change to 3.2.1
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        google()  // Move google() to the top
         mavenCentral()
-        google()
+        jcenter()
         maven { url "https://jitpack.io" }
     }
 }

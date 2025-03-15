@@ -1,6 +1,6 @@
 package io.github.zwieback.familyfinance.core.model.converter;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import java.math.BigDecimal;
 

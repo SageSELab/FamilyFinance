@@ -2,10 +2,10 @@ package io.github.zwieback.familyfinance.util;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 
 import org.threeten.bp.LocalDate;
 
@@ -22,8 +22,8 @@ public final class DialogUtils {
 
     public static void showDatePickerDialog(FragmentManager fragmentManager,
                                             @NonNull LocalDate date) {
-        DialogFragment datePickerFragment = DatePickerFragmentDialog.newInstance(date);
-        datePickerFragment.show(fragmentManager, "datePickerDialog");
+        DatePickerFragmentDialog datePickerFragment = DatePickerFragmentDialog.newInstance(date);
+//        datePickerFragment.show(fragmentManager, "datePickerDialog");
     }
 
     public static void showDatePickerDialog(Context context,

@@ -2,18 +2,19 @@ package io.github.zwieback.familyfinance.core.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.CallSuper;
-import android.support.annotation.IdRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.MenuRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.PopupMenu;
+import androidx.annotation.CallSuper;
+import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.MenuRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.PopupMenu;
 
 import com.annimon.stream.Stream;
 import com.mikepenz.iconics.utils.IconicsMenuInflaterUtil;
@@ -90,16 +91,15 @@ public abstract class EntityActivity<
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_filter:
-                showFilterDialog();
-                return true;
-            case R.id.action_add_entry:
-                addEntity();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_filter) {
+            showFilterDialog();
+            return true;
+        } else if (itemId == R.id.action_add_entry) {
+            addEntity();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     // -----------------------------------------------------------------------------------------
@@ -263,16 +263,15 @@ public abstract class EntityActivity<
 
     protected PopupMenu.OnMenuItemClickListener getPopupItemClickListener(ENTITY entity) {
         return item -> {
-            switch (item.getItemId()) {
-                case R.id.action_edit:
-                    editEntity(entity);
-                    return true;
-                case R.id.action_delete:
-                    deleteEntity(entity);
-                    return true;
-                default:
-                    return false;
+            int itemId = item.getItemId();
+            if (itemId == R.id.action_edit) {
+                editEntity(entity);
+                return true;
+            } else if (itemId == R.id.action_delete) {
+                deleteEntity(entity);
+                return true;
             }
+            return false;
         };
     }
 

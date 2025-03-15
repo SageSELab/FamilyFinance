@@ -3,9 +3,10 @@ package io.github.zwieback.familyfinance.business.backup.activity;
 import android.Manifest;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
+
 import android.view.View;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ import permissions.dispatcher.OnShowRationale;
 import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
-@RuntimePermissions
+//@RuntimePermissions
 public class BackupActivity extends ActivityWrapper {
 
     private static final String XML_EXTENSION = ".xml";
@@ -51,18 +52,18 @@ public class BackupActivity extends ActivityWrapper {
     private void init() {
         backupPrefs = BackupPrefs.with(this);
         databasePrefs = DatabasePrefs.with(this);
-        findViewById(R.id.backup_database_button).setOnClickListener(v ->
-                BackupActivityPermissionsDispatcher
-                        .onBackupDatabaseClickWithPermissionCheck(this, v));
-        findViewById(R.id.restore_database_button).setOnClickListener(v ->
-                BackupActivityPermissionsDispatcher
-                        .onRestoreDatabaseClickWithPermissionCheck(this, v));
-        findViewById(R.id.backup_shared_prefs_button).setOnClickListener(v ->
-                BackupActivityPermissionsDispatcher
-                        .onBackupSharedPrefsClickWithPermissionCheck(this, v));
-        findViewById(R.id.restore_shared_prefs_button).setOnClickListener(v ->
-                BackupActivityPermissionsDispatcher
-                        .onRestoreSharedPrefsClickWithPermissionCheck(this, v));
+//        findViewById(R.id.backup_database_button).setOnClickListener(v ->
+//                BackupActivityPermissionsDispatcher
+//                        .onBackupDatabaseClickWithPermissionCheck(this, v));
+//        findViewById(R.id.restore_database_button).setOnClickListener(v ->
+//                BackupActivityPermissionsDispatcher
+//                        .onRestoreDatabaseClickWithPermissionCheck(this, v));
+//        findViewById(R.id.backup_shared_prefs_button).setOnClickListener(v ->
+//                BackupActivityPermissionsDispatcher
+//                        .onBackupSharedPrefsClickWithPermissionCheck(this, v));
+//        findViewById(R.id.restore_shared_prefs_button).setOnClickListener(v ->
+//                BackupActivityPermissionsDispatcher
+//                        .onRestoreSharedPrefsClickWithPermissionCheck(this, v));
     }
 
     @Override
@@ -70,8 +71,8 @@ public class BackupActivity extends ActivityWrapper {
                                            @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        BackupActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode,
-                grantResults);
+//        BackupActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode,
+//                grantResults);
     }
 
     @NeedsPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)

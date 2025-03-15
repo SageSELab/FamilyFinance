@@ -1,10 +1,11 @@
 package io.github.zwieback.familyfinance.business.preference.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.preference.PreferenceFragmentCompat;
-import android.support.v7.preference.PreferenceScreen;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
 import io.github.zwieback.familyfinance.R;
 import io.github.zwieback.familyfinance.business.preference.fragment.SettingsFragment;
