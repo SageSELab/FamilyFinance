@@ -126,8 +126,8 @@ dependencies {
     annotationProcessor "io.requery:requery-processor:${versions.requeryLib}"
 //    annotationProcessor "ds.gendalf:compiler:${versions.gendalfLib}"
 //    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:${versions.permissionsDispatcherLib}"
-    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.2"
-    annotationProcessor "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.2"
+//    implementation "com.github.permissions-dispatcher:permissionsdispatcher:4.9.2"
+//    annotationProcessor "com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.2"
 
     // UiAutomator Testing
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
